@@ -14,7 +14,6 @@ The project is written in [Reason](https://facebook.github.io/reason/).
 	* N.l := N'.l + 1
 	* N'.r := N.r + 1 (N1 case)
 	* N.r := -N.l (N2 case)
-    	* N'.r := -N'.l (N2 case)
 	* B.r := N.r
 
 3. N -> Lambda
