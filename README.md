@@ -29,6 +29,7 @@ The project is written in [Reason](https://facebook.github.io/reason/).
 ## How to use:
 The project is sandboxed which means that it has a lot of dependecies, so the installed project size is around 3.2 GB.
 
+I recommend using [yarn](https://yarnpkg.com/lang/en/) for the project, but it can be used with npm as well(see Readme-npm).
 ```sh
 git clone https://github.com/StrykerKKD/attribute-grammar-example.git
 cd attribute-grammar-example
