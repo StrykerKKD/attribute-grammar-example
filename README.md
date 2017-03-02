@@ -4,17 +4,17 @@ This project implements a simple attribute grammar, which converts floating poin
 The project is written in [Reason](https://facebook.github.io/reason/).
 
 ## Grammar:
- 1. S -> N<sub>1</sub> . N<sub>2</sub>
+1. S -> N<sub>1</sub> . N<sub>2</sub>
  	* S.v := N<sub>1</sub>.v + N<sub>2</sub>.v
-    * N<sub>1</sub>.r := 0
-    * N<sub>2</sub>.r := -N<sub>2</sub>.l
+	* N<sub>1</sub>.r := 0
+	* N<sub>2</sub>.r := -N<sub>2</sub>.l
 
 2. N -> N'B
 	* N.v := N'.v + B.v
 	* N.l := N'.l + 1
 	* N'.r := N.r + 1 (N1 case)
 	* N.r := -N.l (N2 case)
-    * N'.r := -N'.l (N2 case)
+    	* N'.r := -N'.l (N2 case)
 	* B.r := N.r
 
 3. N -> Lambda
