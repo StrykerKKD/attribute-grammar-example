@@ -28,7 +28,7 @@ type start =
  * Helper functions.
  */
 
-let square_two item => 
+let square_some item => 
     Option.map item ((**) 2.);
 
 let add_some item1 item2 => 
@@ -81,7 +81,7 @@ let eval_binary binary parent_attribute => {
     let Attribute _  _  p_r = parent_attribute;
     switch binary {
         | Zero attribute => Zero (update_attribute attribute (Attribute (Some 0.) None p_r))
-        | One attribute => One (update_attribute attribute (Attribute (square_two p_r) None p_r) )
+        | One attribute => One (update_attribute attribute (Attribute (square_some p_r) None p_r) )
     }
 }; 
     
