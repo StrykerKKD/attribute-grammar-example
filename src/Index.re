@@ -28,14 +28,11 @@ type start =
  * Helper functions.
  */
 
-let square_some item => 
-    Option.map item ((**) 2.);
+let square_some = Option.map f::((**) 2.);
 
-let add_some item1 item2 => 
-    Option.map2 item1 item2 (+.);
+let add_some = Option.map2 f::(+.);
 
-let add_one item =>
-    Option.map item ((+.) 1.);
+let add_one = Option.map f::((+.) 1.);
 
 let negate_some = fun 
     | Some value => Some (-.value)
@@ -138,11 +135,7 @@ let rec eval start =>
  * Examples.
  */
 
-let get_some_value s_value default => 
-    switch s_value {
-        | Some value => value
-        | None => default
-    };
+let get_some_value = Option.value default::(-1.);
 
 let initial_none = Attribute None None None;
 let initial_n1 = Attribute None None (Some 0.);
@@ -183,13 +176,13 @@ let example2 =
 print_string "The result for example1: ";
 
 let S _ _ _ (Attribute s_v1 _ _) = eval(example1);
-print_float(get_some_value s_v1 (-1.));
+print_float(get_some_value s_v1);
 
 print_newline ();
 
 print_string "The result for example2: ";
 
 let S _ _ _ (Attribute s_v2 _ _) = eval(example2);
-print_float(get_some_value s_v2 (-1.));
+print_float(get_some_value s_v2);
 
 print_newline ();
