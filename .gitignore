@@ -14,3 +14,7 @@ _build/**
 *.opt
 
 node_modules
+
+.jenga/**
+
+yarn.lock
