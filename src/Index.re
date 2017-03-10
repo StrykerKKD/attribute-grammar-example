@@ -173,16 +173,8 @@ let example2 =
             initial_n2) 
         initial_none);
 
-print_string "The result for example1: ";
-
 let S _ _ _ (Attribute s_v1 _ _) = eval(example1);
-print_float(get_some_value s_v1);
-
-print_newline ();
-
-print_string "The result for example2: ";
+Printf.printf "The result for example1: %F \n" (get_some_value s_v1);
 
 let S _ _ _ (Attribute s_v2 _ _) = eval(example2);
-print_float(get_some_value s_v2);
-
-print_newline ();
+Printf.printf "The result for example2: %F \n" (get_some_value s_v2);
